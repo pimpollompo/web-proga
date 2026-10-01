@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Создать обращение — Help Desk</title>
+</head>
+<body>
+    <a href="#main-content">Перейти к основному содержимому</a>
+
+    <header>
+        <p><strong>Help Desk</strong></p>
+    </header>
+
+    <nav aria-label="Основная навигация">
+        <ul>
+            <li><a href="index.html">Обращения</a></li>
+            <li><a href="create-ticket.html">Создать обращение</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <h1>Создать обращение</h1>
+
+        <form action="#" method="post">
+
+            <div>
+                <label for="customer-name">Имя</label>
+                <input
+                    id="customer-name"
+                    name="customerName"
+                    type="text"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <fieldset>
+                <legend>Предпочтительный способ связи</legend>
+
+                <label>
+                    <input type="radio" name="contactMethod" value="email" checked>
+                    Email
+                </label>
+
+                <label>
+                    <input type="radio" name="contactMethod" value="phone">
+                    Телефон
+                </label>
+
+                <label>
+                    <input type="radio" name="contactMethod" value="messenger">
+                    Мессенджер
+                </label>
+
+                <div>
+                    <label for="contact-value">Контакт для связи</label>
+                    <input
+                        id="contact-value"
+                        name="contactValue"
+                        type="text"
+                        aria-describedby="contact-value-hint"
+                    >
+                    <p id="contact-value-hint">
+                        Укажите email, номер телефона или ник в мессенджере
+                        в зависимости от выбранного способа связи.
+                    </p>
+                </div>
+            </fieldset>
+
+            <div>
+                <label for="title">Тема обращения</label>
+                <input
+                    id="title"
+                    name="title"
+                    type="text"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="category">Категория</label>
+                <select id="category" name="category" required>
+                    <option value="">Выберите категорию</option>
+                    <option value="access">Доступ</option>
+                    <option value="software">Программное обеспечение</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+
+            <fieldset>
+                <legend>Приоритет</legend>
+
+                <label>
+                    <input type="radio" name="priority" value="normal" checked>
+                    Обычный
+                </label>
+
+                <label>
+                    <input type="radio" name="priority" value="high">
+                    Высокий
+                </label>
+            </fieldset>
+
+            <div>
+                <label for="description">Описание проблемы</label>
+                <textarea
+                    id="description"
+                    name="description"
+                    rows="7"
+                    aria-describedby="description-hint"
+                    required
+                ></textarea>
+                <p id="description-hint">
+                    Опишите, что вы делали, что ожидали увидеть и что произошло.
+                    Чем подробнее описание, тем быстрее мы поможем.
+                </p>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" name="consent" required>
+                    Подтверждаю корректность введенных данных
+                </label>
+            </div>
+
+            <button type="submit">Отправить обращение</button>
+            <button type="reset">Очистить форму</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Учебный проект Help Desk</p>
+    </footer>
+</body>
+</html>

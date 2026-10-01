@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Broken 2 — Help Desk</title>
+</head>
+<body>
+    <a href="#main-content">Перейти к основному содержимому</a>
+
+    <header>
+        <p><strong>Help Desk</strong></p>
+    </header>
+
+    <nav aria-label="Основная навигация">
+        <ul>
+            <li><a href="index.html">Обращения</a></li>
+            <li><a href="create-ticket.html">Создать обращение</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <h1>Создать обращение</h1>
+
+        <form action="#" method="post">
+
+            <div>
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="telefon">
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email">
+            </div>
+
+            <div>
+                <label for="email">Контакт для связи</label>
+                <input id="email" name="contactValue" type="text">
+            </div>
+
+            <fieldset>
+                <legend>Приоритет</legend>
+                <label>
+                    <input type="radio" name="priority" value="normal" checked>
+                    Обычный
+                </label>
+                <label>
+                    <input type="radio" name="priority" value="high">
+                    Высокий
+                </label>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>Учебный проект Help Desk</p>
+    </footer>
+</body>
+</html>
